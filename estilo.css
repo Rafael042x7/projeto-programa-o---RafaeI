@@ -50,3 +50,13 @@ text-decoration: none;
   background-color: rgb(21, 196, 137);
 
  }
+
+ .cartao-interno{
+    position: relative;
+
+ }
+
+ .cartao-frente, .carto-verso{
+position: absolute;
+
+ }
