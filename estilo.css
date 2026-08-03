@@ -53,7 +53,7 @@ text-decoration: none;
 
  .cartao-interno{
     position: relative;
-
+    transition: transorm 0.8s;
  }
 
  .cartao-frente, .carto-verso{
@@ -63,5 +63,8 @@ box-shadow: 0 6px 12px rgba(202, 9, 9, 0.15);
 backface-visibility: hidden;
  }
  .cartao-verso { 
+  transform: rotateY(180deg); 
+} 
+.cartao:hover .cartao-interno { 
   transform: rotateY(180deg); 
 } 
