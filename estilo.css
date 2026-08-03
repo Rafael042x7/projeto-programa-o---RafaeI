@@ -58,5 +58,8 @@ text-decoration: none;
 
  .cartao-frente, .carto-verso{
 position: absolute;
+border: radius 12px;
 
  }
+
+ 
