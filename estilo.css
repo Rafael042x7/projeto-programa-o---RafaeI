@@ -40,7 +40,7 @@ padding: 40px 20px;
 
 h2 {
 margin-bottom: 30px;
-color: #493434;
+color: #1d1919;
 }
 
 .cartao {
@@ -77,7 +77,7 @@ height: 100%;
 backface-visibility: hidden;
 border-radius: 15px;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-background-color: #635f5f;
+background-color: #1b1212;
 overflow: hidden;
 text-align: center;
 }
