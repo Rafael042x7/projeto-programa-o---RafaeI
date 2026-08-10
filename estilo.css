@@ -1,75 +1,102 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background-color:rgb(0, 139, 19)
-}
-
-.cartao {
-    width: 260px;
-    height: 200px;
-}
-
-.cartao-imagem {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: darkgray;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+background-color: #f0f0f0;
+font-family: sans-serif;
+}
+
+.cabecalho {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 25px;
+background-color: #d41818;
+}
+
+.cabecalho-link {
+color: #fff;
+text-decoration: none;
+}
+
+h1 {
+color: #fff;
+font-size: 20px;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 20px;
 }
- .cabecalho-link{
-color: darkblue;
-text-decoration: none;
 
- }
- h1{
-  color: rgb(255, 248, 248);
-  font-size: 18px;
- }
+h2 {
+margin-bottom: 30px;
+color: #333;
+}
 
- footer {
-  background-color: rgb(27, 199, 199);
-  padding: 15px 25px;
-  background-color: rgb(21, 196, 137);
+.cartao {
+width: 300px;
+height: 450px;
+perspective: 1000px;
+}
 
- }
+.cartao-imagem {
+width: 100%;
+height: 320px;
+object-fit: cover;
+object-position: top;
+display: block;
+}
 
- .cartao-interno{
-    position: relative;
-    transition: transorm 0.8s;
- }
+.cartao-conteudo {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
 
- .cartao-frente, .carto-verso{
+.cartao:hover .cartao-conteudo {
+transform: rotateY(180deg);
+}
+
+.cartao-frente,
+.cartao-verso {
 position: absolute;
-border: radius 12px;
-box-shadow: 0 6px 12px rgba(202, 9, 9, 0.15);
+width: 100%;
+height: 100%;
 backface-visibility: hidden;
- }
+border-radius: 15px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+background-color: #fff;
+overflow: hidden;
+text-align: center;
+}
 
- .cartao-verso { 
-  transform: rotateY(180deg); 
-} 
+.cartao-frente p,
+.cartao-verso p {
+padding: 15px;
+font-size: 16px;
+line-height: 1.4;
+color: #333;
+}
 
-.cartao:hover .cartao-interno { 
-  transform: rotateY(180deg); 
-} 
+.cartao-verso {
+transform: rotateY(180deg);
+}
+
+section {
+display: flex;
+gap: 25px;
+flex-wrap: wrap;
+justify-content: center;
+}
